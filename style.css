@@ -1,0 +1,137 @@
+*{
+  padding: 0;;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.4px;
+}
+
+body{
+  background: linear-gradient(
+    135deg,
+    pink,
+    rgb(171, 124, 124)
+  ) fixed;
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 10%;
+  left: 50%;
+  color: rgb(17, 17, 17);
+}
+
+.container{
+  background-color: rgb(150, 194, 236);
+  width: 450px;
+  padding: 50px 50px;
+  border-radius: 10px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 30px 50px rgb(87, 96, 124);
+}
+
+.lbl{
+  font-size: 25px;
+  color:rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.val{
+  color:rgb(51, 51, 51);
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.input-box{
+  background-color: #dadbdf;
+  color: #000000;
+  padding: 5px;
+}
+#bill{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100px;
+  text-align: right;
+  color: rgb(53, 53, 55);
+}
+
+hr{
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+input[type="range"]{
+  width: 100%;
+  cursor: pointer;
+}
+input[type="range"]:not(:last-child){
+  margin-bottom: 5px;
+}
+
+section:not(:last-child){
+  margin-bottom: 40px;
+}
+section:not(:first-child){
+  margin-top: 40px;
+}
+section:last-child{
+  background-color: pink;
+  padding: 10px;
+  border-radius: 5px;
+}
+section:last-child .val,
+section:last-child .lbl{
+  color:rgb(51, 51, 51);
+}
+
+
+/* ----------------Bubbles--------------------------- */
+.background-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.bubbles span{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: rgb(124, 124, 199);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc ;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(155s / var(--i));
+}
+.bubbles span:nth-child(even){
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 
+  0 0 50px #ff2d75,
+  0 0 100px #ff2d75 ;
+}
+@keyframes animate{
+  0%
+  {
+    transform: translateY(100vh) scale(0);
+  }
+  100%
+  {
+    transform: translateY(-10vh) scale(1);
+  }
+}
