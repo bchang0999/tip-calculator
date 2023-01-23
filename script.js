@@ -28,7 +28,7 @@ function calculateTip() {
     document.getElementById('split-num').textContent = noOfPeople
     document.getElementById('tip-percent').textContent = tipPercent
 
-    console.log("the bill amount is", bill, "the tip pecentage is", tipPercent, "there are ", noOfPeople, "people")
+    console.log("the bill amount is", bill, "the tip pecentage is", tipPercent, "there is ", noOfPeople, "people")
 
     document.getElementById("tip-amount").textContent = `\$ ${totalTip}`;
     document.getElementById("total-amount").textContent = `\$ ${total}`;
